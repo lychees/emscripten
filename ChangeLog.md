@@ -24,6 +24,10 @@ See docs/process.md for more on how version tagging works.
   compatabiliy with external JS code we still include this function by default
   but it will no longer be included in `-sSTRICT` mode.  Usages of this function
   are generally best replaced with `_malloc`, `stackAlloc` or `allocateUTF8`.
+- Remove support for deprecated `EMMAKEN_COMPILER`, `EMMAKEN_CFLAGS`, and
+  `EMMAKEN_NO_SDK`.
+  environment variabls.  The former is replaced by setting `LLVM_ROOT` in the
+  config file.  The latter is replaced by `EMCC_CFLAGS`.
 
 3.1.4 - 02/14/2022
 ------------------
